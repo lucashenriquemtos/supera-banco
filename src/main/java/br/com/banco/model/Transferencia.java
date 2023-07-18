@@ -1,6 +1,8 @@
 package br.com.banco.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
@@ -12,6 +14,8 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @Table(name = "transferencia")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Transferencia {
 
 	@Id
