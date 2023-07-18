@@ -60,10 +60,8 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v4.1.1
+    - name: Build and push
+      uses: docker/build-push-action@v4
       with:
-        context: .
         push: true
         tags: lucashenriquemtos/banco:latest
-        platforms: linux/amd64,linux/arm64
