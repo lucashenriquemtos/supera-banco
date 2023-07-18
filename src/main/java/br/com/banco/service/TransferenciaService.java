@@ -20,14 +20,10 @@ import java.util.stream.Collectors;
 @Transactional(readOnly = true)
 public class TransferenciaService {
 
-	private final TransferenciaRepository transferenciaRepository;
-	private final ContaRepository contaRepository;
-
 	@Autowired
-	public TransferenciaService(TransferenciaRepository transferenciaRepository, ContaRepository contaRepository) {
-		this.transferenciaRepository = transferenciaRepository;
-		this.contaRepository = contaRepository;
-	}
+	private TransferenciaRepository transferenciaRepository;
+	@Autowired
+	private ContaRepository contaRepository;
 
 	public List<TransferenciaDTO> obterTodasTransferencias() {
 		List<Transferencia> transferencias = transferenciaRepository.findAll();
@@ -110,6 +106,7 @@ public class TransferenciaService {
 
 	private TransferenciaDTO convertToTransferenciaDTO(Transferencia transferencia) {
 		TransferenciaDTO transferenciaDTO = new TransferenciaDTO();
+
 		transferenciaDTO.setId(transferencia.getId());
 		transferenciaDTO.setDataTransferencia(transferencia.getDataTransferencia());
 		transferenciaDTO.setValor(transferencia.getValor());
