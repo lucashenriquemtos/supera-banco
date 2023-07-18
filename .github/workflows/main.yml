@@ -65,5 +65,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: lucashenriquemtos/supera-java:latest
+        tags: lucashenriquemtos/banco:latest
         platforms: linux/amd64,linux/arm64
