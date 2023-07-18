@@ -1,11 +1,11 @@
-CREATE TABLE conta
+CREATE TABLE IF NOT EXISTS conta
 (
     id_conta IDENTITY NOT NULL PRIMARY KEY,
     nome_responsavel VARCHAR(50) NOT NULL
 );
 
 
-CREATE TABLE transferencia
+CREATE TABLE IF NOT EXISTS transferencia
 (
     id IDENTITY NOT NULL PRIMARY KEY,
     data_transferencia TIMESTAMP WITH TIME ZONE NOT NULL,
