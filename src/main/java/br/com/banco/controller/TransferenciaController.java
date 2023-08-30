@@ -58,7 +58,7 @@ public class TransferenciaController {
 	}
 
 
-	// Obter uma transferência por ID
+
 	@GetMapping("/{id}")
 	public ResponseEntity<?> obterTransferenciaPorId(@PathVariable("id") Long id) {
 		try {
@@ -71,7 +71,7 @@ public class TransferenciaController {
 		}
 	}
 
-	// Adicionar uma transferência
+
 	@PostMapping
 	public ResponseEntity<?> adicionarTransferencia(@RequestBody TransferenciaDTO transferenciaDTO) {
 		try {
@@ -84,7 +84,7 @@ public class TransferenciaController {
 		}
 	}
 
-	// Atualizar uma transferência
+
 	@PutMapping("/{id}")
 	public ResponseEntity<?> atualizarTransferencia(@PathVariable("id") Long id, @RequestBody TransferenciaDTO transferenciaDTO) {
 		try {
@@ -97,7 +97,7 @@ public class TransferenciaController {
 		}
 	}
 
-	// Remover uma transferência
+
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> removerTransferencia(@PathVariable("id") Long id) {
 		try {
